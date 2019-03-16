@@ -74,7 +74,7 @@ const forEachLine = (lines, callback = (line, nextLine) => {}) => {
     let s = asmStrs();
     let nextLine = asmStrs();
 
-    while (s) {
+    while (s !== null) {
         callback(s, nextLine);
         s = nextLine;
         nextLine = asmStrs();
